@@ -94,7 +94,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 88661925}
   - 212: {fileID: 88661926}
-  m_Layer: 5
+  - 61: {fileID: 88661927}
+  - 114: {fileID: 88661928}
+  m_Layer: 0
   m_Name: btn_beginner@3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +145,65 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &88661927
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88661924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 4.5, y: 2.4}
+--- !u!114 &88661928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88661924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d5d1a0c3a474725998b28accc99209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLanguageSelector: 0
+  isDifficutlySelector: 1
+  requireSceneTransition: 1
+  targetValue: 1
+  sceneName: SceneLevelSelect
+  isBackButton: 0
+--- !u!1 &237957463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 237957464}
+  m_Layer: 0
+  m_Name: backButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &237957464
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 237957463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1610415617}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &269773411
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &451893758
 Transform:
   m_ObjectHideFlags: 0
@@ -288,6 +349,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &841156638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 841156640}
+  - 114: {fileID: 841156639}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &841156639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841156638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b35016c55914102818dd2b65124dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlNodes:
+  - {fileID: 269773411}
+  - {fileID: 451893757}
+  - {fileID: 237957463}
+  currentScene: SceneLanguageSelect
+--- !u!4 &841156640
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841156638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1182535375
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,8 +402,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1182535377}
   - 212: {fileID: 1182535376}
-  - 114: {fileID: 1182535378}
-  m_Layer: 5
+  - 61: {fileID: 1182535378}
+  - 114: {fileID: 1182535379}
+  m_Layer: 0
   m_Name: btn_en_la@3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +453,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 269773412}
   m_RootOrder: 0
---- !u!114 &1182535378
+--- !u!61 &1182535378
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182535375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3.9, y: 3}
+--- !u!114 &1182535379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -355,9 +475,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182535375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4350f5de04a44b79da9cae7719ad22, type: 3}
+  m_Script: {fileID: 11500000, guid: d4d5d1a0c3a474725998b28accc99209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLanguageSelector: 1
+  isDifficutlySelector: 0
+  requireSceneTransition: 1
+  targetValue: 1
+  sceneName: SceneDifficultySelect
+  isBackButton: 0
 --- !u!1 &1258071040
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +493,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1258071041}
   - 212: {fileID: 1258071042}
-  m_Layer: 5
+  - 61: {fileID: 1258071043}
+  - 114: {fileID: 1258071044}
+  m_Layer: 0
   m_Name: btn_intermed@3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,6 +544,37 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1258071043
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258071040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Size: {x: 4.8, y: 2.7}
+--- !u!114 &1258071044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258071040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d5d1a0c3a474725998b28accc99209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLanguageSelector: 0
+  isDifficutlySelector: 1
+  requireSceneTransition: 1
+  targetValue: 2
+  sceneName: SceneLevelSelect
+  isBackButton: 0
 --- !u!1 &1610415615
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +584,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1610415617}
   - 212: {fileID: 1610415616}
-  m_Layer: 5
+  - 61: {fileID: 1610415618}
+  - 114: {fileID: 1610415619}
+  m_Layer: 0
   m_Name: btn_back@3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,8 +633,39 @@ Transform:
   m_LocalPosition: {x: -4.4768596, y: 3.2275035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 237957464}
+  m_RootOrder: 0
+--- !u!61 &1610415618
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1610415615}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.89, y: 0.89}
+--- !u!114 &1610415619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1610415615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d5d1a0c3a474725998b28accc99209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLanguageSelector: 0
+  isDifficutlySelector: 0
+  requireSceneTransition: 0
+  targetValue: -1
+  sceneName: 
+  isBackButton: 1
 --- !u!1 &1633782316
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +675,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1633782318}
   - 212: {fileID: 1633782317}
-  m_Layer: 5
+  - 61: {fileID: 1633782319}
+  - 114: {fileID: 1633782320}
+  m_Layer: 0
   m_Name: btn_us_la@3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,6 +726,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 269773412}
   m_RootOrder: 1
+--- !u!61 &1633782319
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633782316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3.9, y: 3}
+--- !u!114 &1633782320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633782316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d5d1a0c3a474725998b28accc99209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLanguageSelector: 1
+  isDifficutlySelector: 0
+  requireSceneTransition: 1
+  targetValue: 2
+  sceneName: SceneDifficultySelect
+  isBackButton: 0
 --- !u!1 &1783929558
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +836,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1884611878}
   - 212: {fileID: 1884611879}
-  m_Layer: 5
+  - 61: {fileID: 1884611880}
+  - 114: {fileID: 1884611881}
+  m_Layer: 0
   m_Name: btn_expert@3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,6 +887,37 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1884611880
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1884611877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 4.2, y: 2.55}
+--- !u!114 &1884611881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1884611877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d5d1a0c3a474725998b28accc99209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLanguageSelector: 0
+  isDifficutlySelector: 1
+  requireSceneTransition: 1
+  targetValue: 3
+  sceneName: SceneLevelSelect
+  isBackButton: 0
 --- !u!1 &2114285468
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +926,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2114285469}
+  - 114: {fileID: 2114285470}
   m_Layer: 0
   m_Name: ControlManager
   m_TagString: Untagged
@@ -686,4 +945,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
+--- !u!114 &2114285470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114285468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4350f5de04a44b79da9cae7719ad22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
