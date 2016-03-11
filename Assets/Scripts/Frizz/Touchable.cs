@@ -13,18 +13,7 @@ public class Touchable : MonoBehaviour
 
 	public void performAction ()
 	{
-		if (isLanguageSelector) {
-			Setting.Instance.language = targetValue;
-		} else if (isDifficutlySelector) {
-			Setting.Instance.difficulty = targetValue;
-		}
-		if (requireSceneTransition) {
-			GameManager.Instance.setScene (sceneName);
-		}
-		if (isBackButton) {
-			GameManager.Instance.toPreviousScene ();
-		}
-
+		GameManager.Instance.performUIAction (this);
 	}
 }
 
