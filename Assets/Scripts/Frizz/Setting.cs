@@ -6,6 +6,7 @@ public class Setting : Singleton<Setting>
 	public float backgroundScale = 1.0f;
 	public int language;
 	public int difficulty;
+	public int gameLevel;
 
 	protected Setting ()
 	{

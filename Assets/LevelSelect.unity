@@ -173,8 +173,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 3
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &391352485
 GameObject:
@@ -350,8 +350,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 10
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &530512806
 GameObject:
@@ -441,8 +441,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 4
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &628017814
 GameObject:
@@ -532,8 +532,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 7
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &713146275
 GameObject:
@@ -623,8 +623,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 9
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &935198140
 GameObject:
@@ -714,8 +714,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 2
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &942832761
 GameObject:
@@ -805,8 +805,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 1
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &1000101774
 GameObject:
@@ -896,8 +896,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 3
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &1282914489
 GameObject:
@@ -1148,8 +1148,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 6
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &1733707643
 GameObject:
@@ -1301,8 +1301,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 5
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &2081936061
 GameObject:
@@ -1392,8 +1392,8 @@ MonoBehaviour:
   isLanguageSelector: 0
   isDifficutlySelector: 0
   requireSceneTransition: 1
-  targetValue: -1
-  sceneName: GameLevel
+  targetValue: 8
+  sceneName: SceneGameLevel
   isBackButton: 0
 --- !u!1 &2095689650
 GameObject:

@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
 	public static string kSceneGameLevel = "SceneGameLevel";
 
 	public GameObject[] controlNodes;
+	int controlValue;
 
 	public string currentScene = null;
 
@@ -25,6 +26,8 @@ public class GameManager : Singleton<GameManager>
 		} else if (touchedControl.isDifficutlySelector) {
 			Setting.Instance.difficulty = touchedControl.targetValue;
 		}
+		print ("set touch targetValue" + touchedControl.targetValue);
+		controlValue = touchedControl.targetValue;
 		if (touchedControl.requireSceneTransition) {
 			setScene (touchedControl.sceneName);
 		}
@@ -89,6 +92,12 @@ public class GameManager : Singleton<GameManager>
 				SceneManager.UnloadScene (SceneManager.GetActiveScene ().name);
 				SceneManager.LoadScene ("LevelSelect");
 			}
+		} else if (name == kSceneGameLevel) {
+			Setting.Instance.gameLevel = controlValue;
+			if (SceneManager.GetActiveScene ().name != "GameLevel") {
+				SceneManager.UnloadScene (SceneManager.GetActiveScene ().name);
+				SceneManager.LoadScene ("GameLevel");
+			}
 		}
 		currentScene = name;
 
@@ -121,6 +130,13 @@ public class GameManager : Singleton<GameManager>
 			node.SetActive (true);
 			node = controlNodes [2];
 			node.SetActive (true);
+		} else if (name == kSceneGameLevel) {
+			Background background = Object.FindObjectOfType<Background> ();
+			if (background != null) {
+				print ("game level to load " + Setting.Instance.gameLevel);
+				SpriteRenderer sRenderer = background.GetComponent<SpriteRenderer> ();
+				sRenderer.sprite = background.GetComponent<GameBackground> ().sprites [Setting.Instance.gameLevel - 1];
+			}
 		}
 	}
 
