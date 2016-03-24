@@ -86,6 +86,7 @@ public class MenuController : MonoBehaviour
 			scenename = "LevelSelect";
 			break;
 		case 3:
+			Setting.Instance.gameScore = 0;
 			scenename = "GameLevel";
 			break;
 		}

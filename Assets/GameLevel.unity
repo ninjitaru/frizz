@@ -95,9 +95,10 @@ GameObject:
   - 4: {fileID: 30924889}
   - 212: {fileID: 30924890}
   - 50: {fileID: 30924893}
-  - 61: {fileID: 30924892}
   - 58: {fileID: 30924891}
   - 114: {fileID: 30924894}
+  - 95: {fileID: 30924895}
+  - 61: {fileID: 30924892}
   m_Layer: 9
   m_Name: hero
   m_TagString: Player
@@ -112,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 30924888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: -2, z: 0}
+  m_LocalPosition: {x: -1.4, y: -2.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1132050699}
@@ -144,7 +145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1783731295
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0538bab377d324ae4b204b0947ca8435, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 8f49c10456ea049139173a1932aa1ce5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,7 +160,7 @@ CircleCollider2D:
   m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.85}
+  m_Offset: {x: 0, y: -0.39}
   serializedVersion: 2
   m_Radius: 0.67
 --- !u!61 &30924892
@@ -173,9 +174,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.11, y: 2.88}
+  m_Size: {x: 1.73, y: 2.17}
 --- !u!50 &30924893
 Rigidbody2D:
   serializedVersion: 2
@@ -215,6 +216,23 @@ MonoBehaviour:
   tauntDelay: 1
   walkLeft: 0
   walkRight: 0
+--- !u!95 &30924895
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30924888}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb8891082c71b4ace9f750c021b41243, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &172701788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132050698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.6, z: 0}
+  m_LocalPosition: {x: 0, y: -1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 30924889}

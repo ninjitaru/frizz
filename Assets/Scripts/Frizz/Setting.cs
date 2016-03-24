@@ -13,6 +13,7 @@ public class Setting : Singleton<Setting>
 	//
 
 	public int gameScore;
+	public int previousGameScore;
 
 	protected Setting ()
 	{
