@@ -37,7 +37,6 @@ public class FrizzPlayerControl : MonoBehaviour
 	private Animator anim;
 	// Reference to the player's animator component.
 
-
 	void Awake ()
 	{
 		// Setting up references.
@@ -54,6 +53,18 @@ public class FrizzPlayerControl : MonoBehaviour
 		// If the jump button is pressed and the player is grounded then the player should jump.
 //		if (Input.GetButtonDown ("Jump") && grounded)
 //			jump = true;
+	}
+
+	public GameObject EatCookie (GameObject[]gameobjects)
+	{
+		BoxCollider2D playerCollider = GetComponent<BoxCollider2D> ();
+		foreach (GameObject obj in gameobjects) {
+			CircleCollider2D collider = obj.GetComponent<CircleCollider2D> ();
+			if (playerCollider.bounds.Intersects (collider.bounds)) {
+				return obj;
+			}
+		}
+		return null;
 	}
 
 	public void Jump ()

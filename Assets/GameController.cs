@@ -5,15 +5,18 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
 	public FrizzPlayerControl player;
+	public CookieSpawner spawner;
 
 	public Button walkLeftButton;
 	public Button walkRightButton;
 	public Button jumpButton;
 	public Button barkButton;
 	public Button pickButton;
+	public Text scoreBoard;
 	// Use this for initialization
 	void Start ()
 	{
+		scoreBoard.text = "0";
 //		walkLeftButton.OnPointerUp = () => {
 //			player.walkLeft = false;
 //		};
@@ -84,8 +87,19 @@ public class GameController : MonoBehaviour
 			print ("bark");
 			break;
 		case 3:
-			print ("eat");
-			break;
+			{
+				GameObject cookieEaten = player.EatCookie (spawner.cookies.ToArray ());
+				if (cookieEaten != null) {
+					BonePickup pickerup = cookieEaten.GetComponent<BonePickup> ();
+					if (pickerup.letter == "A") {
+						Setting.Instance.gameScore += 1;
+						scoreBoard.text = "" + Setting.Instance.gameScore;
+					}
+					spawner.cookies.Remove (cookieEaten);
+					Object.Destroy (pickerup.gameObject);
+				}
+				break;
+			}
 		}
 	}
 }

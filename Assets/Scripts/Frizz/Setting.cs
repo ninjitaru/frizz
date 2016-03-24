@@ -12,6 +12,8 @@ public class Setting : Singleton<Setting>
 	public int gameLevel;
 	//
 
+	public int gameScore;
+
 	protected Setting ()
 	{
 	}

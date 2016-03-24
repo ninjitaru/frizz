@@ -37,7 +37,7 @@ public class FollowCamera : MonoBehaviour
 			Vector3 position = this.transform.position;
 			position.x = targetTransform.position.x;
 			Bounds cameraBounds = CameraExtensions.OrthographicBounds (camera);
-			print (cameraBounds.min + " " + cameraBounds.max);
+			//print (cameraBounds.min + " " + cameraBounds.max);
 			if (position.x <= minX) {
 				position.x = minX;
 			} else if (position.x >= maxX) {
